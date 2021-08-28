@@ -10,7 +10,7 @@
 ## Description
 
 - add additional games, additional questions(topics)
- Trivia questions (genre)
+Trivia questions (genre)
 Trivia pursuit 5 genres; 4 questions per;
 Questions right to unlock puzzle piece
 All 5 pieces unlock- leader-board (questions Correct and score) can be negative
