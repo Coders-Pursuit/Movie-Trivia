@@ -35,5 +35,6 @@ Indicator of users progress
 
 3. MVP: Random 20 Questions, Answers, Leader-board
 
- ![Wireframe](images/wireframe)
+![Wireframe](images/wireframe.png)
+![Domain Model](images/domain-model.png)
 [Project Managment](https://trello.com/b/tKt9lrsx/coders-puruit-board)
