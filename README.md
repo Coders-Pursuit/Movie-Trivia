@@ -37,4 +37,5 @@ Indicator of users progress
 
 ![Wireframe](images/wireframe.png)
 ![Domain Model](images/domain-model.png)
+![Database Schema](images/Database.png)
 [Project Managment](https://trello.com/b/tKt9lrsx/coders-puruit-board)
