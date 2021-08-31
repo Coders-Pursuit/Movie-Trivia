@@ -34,3 +34,6 @@ Indicator of users progress
 2. Resolves Users’ boredom, Certify that users know their movies
 
 3. MVP: Random 20 Questions, Answers, Leader-board
+
+ ![Wireframe](images/wireframe)
+[Project Managment](https://trello.com/b/tKt9lrsx/coders-puruit-board)
