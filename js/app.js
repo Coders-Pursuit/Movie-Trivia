@@ -1,18 +1,35 @@
-'use strict'
+'use strict';
 
 console.log('This is a test of the emergency boradcast system');
 
 let questionsArray = [];
-let questionsAnswered = [];
+let userArray = [];
+// let questionsAnswered = [];
 
 let questionContainer = document.getElementById('question');
 
-
-
-function selectRandomProduct() {
-    return Math.floor(Math.random()* (questionsArray.length));
+function storeItem() {
+    let storedItems = JSON.stringify(userArray);
+    localStorage.setItem('user-inputs', storedItems);
 }
 
+function getUsers() {
+    let userData = JSON.parse(localStorage.getItem('user-inputs'));
+    if (userData) {
+        userArray = userData;
+    }
+}
+
+function selectRandomProduct() {
+    return Math.floor(Math.random() * (questionsArray.length));
+}
+function userConstructor(name, color, score = 0) {
+    this.name = name;
+    this.color = color;
+    this.score = score;
+    userArray.push(this);
+
+}
 function questionsConstructor(category, question, answerCorrect, answerIncorrectA, answerIncorrectB, answerIncorrectC) {
     this.category = category;
     this.question = question;
@@ -34,7 +51,7 @@ new questionsConstructor('Documentary', 'What did Carol Baskin cover her former 
 
 console.log(questionsArray);
 
-function renderQuestions () {
+function renderQuestions() {
     let randomQuestion = selectRandomProduct();
     let h3 = document.createElement('h3');
     h3.textContent = questionsArray[randomQuestion].question;
@@ -46,10 +63,10 @@ function renderQuestions () {
     let button4 = document.createElement('button');
 
 
-    button1.textContent=questionsArray[randomQuestion].answerIncorrectA;
-    button2.textContent=questionsArray[randomQuestion].answerIncorrectB;
-    button3.textContent=questionsArray[randomQuestion].answerIncorrectC;
-    button4.textContent=questionsArray[randomQuestion].answerCorrect;
+    button1.textContent = questionsArray[randomQuestion].answerIncorrectA;
+    button2.textContent = questionsArray[randomQuestion].answerIncorrectB;
+    button3.textContent = questionsArray[randomQuestion].answerIncorrectC;
+    button4.textContent = questionsArray[randomQuestion].answerCorrect;
 
     let answerContainer = document.getElementById('answers');
 
@@ -59,13 +76,14 @@ function renderQuestions () {
     answerContainer.appendChild(button4);
 
 
-// while (questionsAnswered.length < numberOfUniqueIndexes) {
-//     let randomProduct = selectRandomProduct();
-//     if (!questionsAnswered.includes(randomProduct)) {
-//       questionsAnswered.push(randomProduct);
-//     }
+    // while (questionsAnswered.length < numberOfUniqueIndexes) {
+    //     let randomProduct = selectRandomProduct();
+    //     if (!questionsAnswered.includes(randomProduct)) {
+    //       questionsAnswered.push(randomProduct);
+    //     }
 }
 
 
 
 renderQuestions();
+getUsers();
