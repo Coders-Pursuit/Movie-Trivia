@@ -3,6 +3,15 @@
 console.log('This is a test of the emergency boradcast system');
 
 let questionsArray = [];
+let questionsAnswered = [];
+
+let questionContainer = document.getElementById('question');
+
+
+
+function selectRandomProduct() {
+    return Math.floor(Math.random()* (questionsArray.length));
+}
 
 function questionsConstructor(category, question, answerCorrect, answerIncorrectA, answerIncorrectB, answerIncorrectC) {
     this.category = category;
@@ -24,3 +33,39 @@ new questionsConstructor('Documentary', 'What did Carol Baskin cover her former 
 
 
 console.log(questionsArray);
+
+function renderQuestions () {
+    let randomQuestion = selectRandomProduct();
+    let h3 = document.createElement('h3');
+    h3.textContent = questionsArray[randomQuestion].question;
+    questionContainer.appendChild(h3);
+    console.log(questionsArray[randomQuestion].question);
+    let button1 = document.createElement('button');
+    let button2 = document.createElement('button');
+    let button3 = document.createElement('button');
+    let button4 = document.createElement('button');
+
+
+    button1.textContent=questionsArray[randomQuestion].answerIncorrectA;
+    button2.textContent=questionsArray[randomQuestion].answerIncorrectB;
+    button3.textContent=questionsArray[randomQuestion].answerIncorrectC;
+    button4.textContent=questionsArray[randomQuestion].answerCorrect;
+
+    let answerContainer = document.getElementById('answers');
+
+    answerContainer.appendChild(button1);
+    answerContainer.appendChild(button2);
+    answerContainer.appendChild(button3);
+    answerContainer.appendChild(button4);
+
+
+// while (questionsAnswered.length < numberOfUniqueIndexes) {
+//     let randomProduct = selectRandomProduct();
+//     if (!questionsAnswered.includes(randomProduct)) {
+//       questionsAnswered.push(randomProduct);
+//     }
+}
+
+
+
+renderQuestions();
