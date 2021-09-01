@@ -4,7 +4,7 @@
     color: #27233a;
 }
 
-/* ----------- color palette
+----------- color palette
 colors: 
     #DCC48E - header/footer
     #EAEFD3 - background
@@ -13,7 +13,7 @@ colors:
     #27233A - font
 } */
 
-/* ---------- general layout setup */
+/* ---------- general layout setup
 
 header, footer {
     background-color: #dcc48e;
@@ -24,4 +24,8 @@ header a, footer a {
     display: inline-block;
     padding: 10px;
     margin: 5px;
+}
+#user {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 50px;
 }
