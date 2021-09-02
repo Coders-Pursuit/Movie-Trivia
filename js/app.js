@@ -6,7 +6,7 @@ let questionsArray = [];
 
 // let questionOrder = [];
 let questionContainer = document.getElementById('question');
-
+let answerContainer = document.getElementById('answers');
 
 
 
@@ -14,12 +14,9 @@ function selectRandomProduct() {
   return Math.floor(Math.random() * (questionsArray.length));
 }
 
-
 function selectRandomAnswers() {
   return Math.floor(Math.random() * 4);
 }
-
-
 
 function QuestionsConstructor(category, question, answerCorrect, answerIncorrectA, answerIncorrectB, answerIncorrectC) {
   this.category = category;
@@ -42,7 +39,7 @@ new QuestionsConstructor('Horror', 'In the movie Get Out what item is used to hy
 new QuestionsConstructor('Horror', 'Which is not a character in the Conjuring Universe?', 'Chucky', 'The Nun', 'La Llorona', 'Annabelle');
 new QuestionsConstructor('Horror', 'In The Thing (1984) where was the station?', 'Antarctica', 'Greenland', 'Iceland', 'Galapagos Islands');
 
-console.log(questionsArray);
+// console.log(questionsArray);
 
 
 ///Randomizes the question order based on a number array...ran at the load of the page
@@ -56,8 +53,6 @@ console.log(questionsArray);
 // }
 // console.log(questionOrder);
 
-
-
 function renderQuestions() {
   let randomQuestion = selectRandomProduct();
   let h3 = document.createElement('h3');
@@ -66,12 +61,15 @@ function renderQuestions() {
 //   console.log(text);
   h3.textContent = questionsArray[randomQuestion].question;
   questionContainer.appendChild(h3);
-  console.log(questionsArray[randomQuestion].question);
+  // console.log(questionsArray[randomQuestion].question);
   let button1 = document.createElement('button');
   let button2 = document.createElement('button');
   let button3 = document.createElement('button');
   let button4 = document.createElement('button');
-
+  button1.setAttribute('id','button1');
+  button2.setAttribute('id','button2');
+  button3.setAttribute('id','button3');
+  button4.setAttribute('id','button4');
 // Randomizes the answer choices
   let shownAnswer = [];
   let answerArray = [];
@@ -91,13 +89,12 @@ function renderQuestions() {
   button3.textContent = shownAnswer[2];
   button4.textContent = shownAnswer[3];
 
-  let answerContainer = document.getElementById('answers');
+  // let answerContainer = document.getElementById('answers');
 
   answerContainer.appendChild(button1);
   answerContainer.appendChild(button2);
   answerContainer.appendChild(button3);
   answerContainer.appendChild(button4);
-
 
   // while (questionsAnswered.length < numberOfUniqueIndexes) {
   //     let randomProduct = selectRandomProduct();
@@ -107,7 +104,44 @@ function renderQuestions() {
 }
 
 
+function questionSubmit(event){
+  let h3 = document.querySelector('h3');
+  let button1 = document.querySelector('button');
 
+  let selection1 = document.getElementById('button1').textContent;
+  let selection2 = document.getElementById('button2').textContent;
+  let selection3 = document.getElementById('button3').textContent;
+  let selection4 = document.getElementById('button4').textContent;
+  console.log(`question submit ${selection1}`);
+  h3.remove();
+  for (let i =0; i<4;i++){
+    let button1 = document.querySelector('button');
+    button1.remove();
+  }
+  // selection2.remove();
+  // selection3.remove();
+  // selection4.remove();
+  // answers.innerHTML = '';
+  // nextQuestion()
+  renderQuestions();
+  nextQuestion()
+
+
+}
 // QuestOrder();
 renderQuestions();
-getUsers();
+
+// let answerButton = document.getElementById('button1');
+
+// getUsers();
+function nextQuestion(){
+  let answerButton1 = document.getElementById('button1');
+  let answerButton2 = document.getElementById('button2');
+  let answerButton3 = document.getElementById('button3');
+  let answerButton4 = document.getElementById('button4');
+  answerButton1.addEventListener('click',questionSubmit);
+  answerButton2.addEventListener('click',questionSubmit);
+  answerButton3.addEventListener('click',questionSubmit);
+  answerButton4.addEventListener('click',questionSubmit);
+  }
+  nextQuestion();
