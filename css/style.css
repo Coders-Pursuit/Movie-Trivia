@@ -1,13 +1,9 @@
-* { 
-   font-family: 'Lato', sans-serif;
-
+* {
+    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    
-    
 }
 
-    
-header{
+header {
     background-color: lightgray;
     color: purple;
     height: 75px;
@@ -15,12 +11,14 @@ header{
     display: inline-block;
     font-family: 'Lato', sans-serif;
 }
-body{
+
+body {
     margin: 0px auto;
 }
-main{
+
+main {
     background-image: url('../images/Trivia.jpg');
-    background-size:contain;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -28,67 +26,65 @@ main{
     background-size: cover;
     /* margin: 0px auto; */
     min-height: 900px;
-    }
-h1, nav, ul, li, a{
+}
+
+h1, nav, ul, li, a {
     display: inline-block;
     margin: 0px 0px 0px 3%;
-
-
 }
-h1{
+
+h1 {
     /* margin-top: 1%; */
 }
-nav{
+
+nav {
     width: 70%;
     text-align: right;
-
 }
-ul{
+
+ul {
     width: 100%;
 }
-li{
+
+li {
     padding-right: 1rem;
     padding-left: 1rem;
     width: 25%;
-
 }
-a{
+
+a {
     text-decoration: none;
     font-size: larger;
 }
-a:hover{
+
+a:hover {
     color: lavender;
 }
-p{
+
+p {
     margin-top: 0px;
-   font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
     padding-top: 30px;
     font-size: 36px;
     padding-left: 1rem;
-
 }
 
-#begin{
+#begin {
     font-size: 40px;
     border-radius: 18px;
     width: 225px;
     height: 75px;
     transition: all 1s ease;
-    color:white;
-    
-    
-
-
+    color: white;
 }
-#begin:hover{
+
+#begin:hover {
     background-color: lime;
-
-    
 }
-div{ 
+
+div {
     padding-top: 120px;
 }
-
 
 /* ----------- color palette
 colors: 
@@ -97,8 +93,54 @@ colors:
     #B3C0A4 - other assigned
     #505168 - other assigned
     #27233A - font
-} */ */
+} */
+
+/* ------------user page css below  -------------- */
+
+h2 {
+    margin: 0px;
+    padding: 2% 0px;
+    font-size: xx-large;
+}
 
 
+form, fieldset {
+    width: 85%;
+    margin: 0px auto;
+    min-height: 250px;
+    
+}
 
+form {
+    background-color: lavender;
+    border: 1px solid black;
+    width: 80%;
+}
 
+fieldset {
+    /* background-color: lavender; */
+    opacity: 95%;
+    border: none;
+}
+
+label {
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 30px;
+    display: block;
+}
+
+#userSubmit {
+    background-color: lightcoral;
+    display: block;
+    padding: 1% 5%;
+    font-size: x-large;
+    /* align-content: right; */
+    border: 5px solid black;
+    align-items: right;
+}
+
+#userSubmit:hover {
+    background-color: blue;
+    color: white;
+}
