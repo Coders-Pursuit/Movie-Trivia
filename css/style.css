@@ -1,34 +1,104 @@
-* {
+* { 
+   font-family: 'Lato', sans-serif;
+
     box-sizing: border-box;
-    /* background-color: #eaefd3; */
     
-    color: #27233a;
+    
+}
+
+    
+header{
+    background-color: lightgray;
+    color: purple;
+    height: 75px;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    margin: 0px auto;
+}
+main{
+    background-image: url('../images/Trivia.jpg');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-size: cover;
+    /* margin: 0px auto; */
+    min-height: 900px;
+    }
+h1, nav, ul, li, a{
+    display: inline-block;
+    margin: 0px 0px 0px 3%;
+
+
+}
+h1{
+    /* margin-top: 1%; */
+}
+nav{
+    width: 70%;
+    text-align: right;
+
+}
+ul{
+    width: 100%;
+}
+li{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: 25%;
+
+}
+a{
+    text-decoration: none;
+    font-size: larger;
+}
+a:hover{
+    color: lavender;
+}
+p{
+    margin-top: 0px;
+   font-family: 'Lato', sans-serif;
+    padding-top: 30px;
+    font-size: 36px;
+    padding-left: 1rem;
+
+}
+
+#begin{
+    font-size: 40px;
+    border-radius: 18px;
+    width: 225px;
+    height: 75px;
+    transition: all 1s ease;
+    color:white;
+    
+    
+
+
+}
+#begin:hover{
+    background-color: lime;
+
+    
+}
+div{ 
+    padding-top: 120px;
 }
 
 
------------ color palette
+/* ----------- color palette
 colors: 
     #DCC48E - header/footer
     #EAEFD3 - background
     #B3C0A4 - other assigned
     #505168 - other assigned
     #27233A - font
-} */
+} */ */
 
 
 
-/* header, footer {
-    background-color: #dcc48e;
-    margin: 0px auto;
-    padding: 5px;
-}
 
-header a, footer a {
-    display: inline-block;
-    padding: 2px;
-    margin: 5px;
-}
-#user {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 50px;
-} */
