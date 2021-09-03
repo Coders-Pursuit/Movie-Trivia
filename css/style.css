@@ -1,8 +1,10 @@
 * {
     box-sizing: border-box;
-    background-color: #eaefd3;
+    /* background-color: #eaefd3; */
+    
     color: #27233a;
 }
+
 
 ----------- color palette
 colors: 
@@ -13,19 +15,20 @@ colors:
     #27233A - font
 } */
 
-/* ---------- general layout setup
 
-header, footer {
+
+/* header, footer {
     background-color: #dcc48e;
     margin: 0px auto;
+    padding: 5px;
 }
 
 header a, footer a {
     display: inline-block;
-    padding: 10px;
+    padding: 2px;
     margin: 5px;
 }
 #user {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 50px;
-}
+} */
