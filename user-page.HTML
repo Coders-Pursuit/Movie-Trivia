@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
+
 <body>
-    <h1 id= "user"> Tell us about yourself!</h1>
-    <form id="addAUser">
+  <header>
+    <h1>Coders Pursuit</h1>
+    <nav>
+      <ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Leader Board</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <h2 id="user"> Tell us about yourself!</h1>
+      <form id="addAUser">
         <fieldset>
-          <label for = "name" >Name: <input type = "text" id ="name" name = "name"></label> 
+          <label for="name">Name: <input type="text" id="name" name="name"></label>
 
-           <br><br>
+          <!-- <br><br> -->
 
-          <label for="favoriteColor">What is your favorite color?: <input type="text" id="favoriteColor" name = "favorite color"></label>
-           <br><br>
+          <label for="favoriteColor">What is your favorite color?: <input type="text" id="favoriteColor"
+              name="favorite color"></label>
+          <!-- <br><br> -->
         </fieldset>
         <a href="question.html"><button id="userSubmit" type="submit">Submit</button></a>
       </form>
 
       <h2>Choose your avatar</h2>
       <div>
-        <img id = "avatar one">
-        <img id = "avatar two">
-        <img id = "avatar three">
+        <img id="avatar one">
+        <img id="avatar two">
+        <img id="avatar three">
       </div>
-      <script src="./js/user.js" text="text/javascript" ></script> 
+  </main>
+  <script src="./js/user.js" text="text/javascript"></script>
 </body>
+
 </html>
