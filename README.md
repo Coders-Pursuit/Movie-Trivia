@@ -39,3 +39,6 @@ Indicator of users progress
 ![Domain Model](images/domain-model.png)
 ![Database Schema](images/Database.png)
 [Project Managment](https://trello.com/b/tKt9lrsx/coders-puruit-board)
+
+
+<!-- https://www.rd.com/article/movie-trivia-facts/ -->
