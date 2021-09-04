@@ -70,6 +70,37 @@ a:hover {
 p {
     color: #525289;
     font-weight: bold;
+    margin-top: 0px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 30px;
+    padding-left: 1rem;
+    width: 85%;
+    margin: 0px auto;
+}
+article{
+    
+    width: 100%;
+    background-color: #ece59a;
+    min-height: 1000px;
+    /* border: 3px black solid; */
+
+}
+ aside{
+    justify-content: stretch;
+    display: inline-block; 
+    width: 20%;
+    margin: 5% 2% 3%;
+    border: 1px solid black;
+    
+    
+}
+img{
+    margin-top: 1%;
+}
+
+#landQuestion {
+    color: #525289;
+    font-weight: bold;
     font-size: 4rem;
     margin-top: 0px;
     font-family: 'Lato', sans-serif;
@@ -92,7 +123,7 @@ p {
 }
 
 #begin:hover {
-    background-color: #6336b2;
+    background-color: #525289;
 }
 
 div {
@@ -190,4 +221,8 @@ input {
 #userSubmit:hover {
     background-color: #525289;
     color: white;
+}
+#aboutus-main{
+    
+    background-color: lavender;
 }
