@@ -8,6 +8,7 @@ let promptedQuestions = [];
 let questionContainer = document.getElementById('question');
 let answerContainer = document.getElementById('answers');
 let categoryContainer = document.querySelector('.category');
+
 let userArray = [];
 
 function storeItem() {
@@ -99,6 +100,10 @@ function questionAsked(){
 }
 console.log(promptedQuestions);
 
+function renderNameAvatar(){
+  let h2 = document.querySelector('.nameavatar');
+  h2.innerText = ` Welcome ${userArray[0].name}!! Your category is:`;
+}
 
 
 function renderQuestions() {
@@ -170,6 +175,9 @@ function questionSubmit(event){
 //   if (questionAsked.length > 20){
 //     myContainer.removeEventListener('click', busclicker);}
   promptedQuestions.shift();
+  if(promptedQuestions.length === 0){
+    window.location.href = "leaderboard.html";
+  }
   console.log(promptedQuestions);
   console.log(`${userArray[0].score} out of ${20-promptedQuestions.length})`);
   renderQuestions();
@@ -179,6 +187,8 @@ function questionSubmit(event){
 
 questOrder();
 questionAsked();
+getUsers();
+renderNameAvatar();
 renderQuestions();
 
 // let answerButton = document.getElementById('button1');
@@ -189,12 +199,13 @@ function nextQuestion(){
   let answerButton2 = document.getElementById('button2');
   let answerButton3 = document.getElementById('button3');
   let answerButton4 = document.getElementById('button4');
+
   answerButton1.addEventListener('click',questionSubmit);
   answerButton2.addEventListener('click',questionSubmit);
   answerButton3.addEventListener('click',questionSubmit);
   answerButton4.addEventListener('click',questionSubmit);
 }
 nextQuestion();
-getUsers();
+
 console.log(userArray);
 
