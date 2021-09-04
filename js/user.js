@@ -31,7 +31,7 @@ function userSubmit(event){
   let name = document.getElementById('name').value;
   let color = event.target.favoriteColor.value;
   // let avatar = avatarArray[0];
-  new UserConstructor(name,color,avatar);
+  new UserConstructor(name,color);
   storeItem();
   document.location.href='question.html';
   console.log(userArray);
