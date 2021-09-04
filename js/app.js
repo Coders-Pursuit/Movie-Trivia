@@ -7,6 +7,20 @@ let questionOrder = [];
 let promptedQuestions = [];
 let questionContainer = document.getElementById('question');
 let answerContainer = document.getElementById('answers');
+let categoryContainer = document.querySelector('.category');
+let userArray = [];
+
+function storeItem() {
+  let storedItems = JSON.stringify(userArray);
+  localStorage.setItem('user-inputs', storedItems);
+}
+  
+function getUsers() {
+  let userData = JSON.parse(localStorage.getItem('user-inputs'));
+  if (userData) {
+    userArray = userData;
+  }
+}
 
 
 
@@ -38,7 +52,16 @@ new QuestionsConstructor('Documentary', 'What did Carol Baskin cover her former 
 new QuestionsConstructor('Horror', 'In the movie Get Out what item is used to hypnotize Chris?', 'Tea cup', 'Watch', 'A piece of string', 'A coin');
 new QuestionsConstructor('Horror', 'Which is not a character in the Conjuring Universe?', 'Chucky', 'The Nun', 'La Llorona', 'Annabelle');
 new QuestionsConstructor('Horror', 'In The Thing (1984) where was the station?', 'Antarctica', 'Greenland', 'Iceland', 'Galapagos Islands');
-
+new QuestionsConstructor('SciFi', 'What is the name of the starship in Firefly?', 'Serenity', 'Firefly', 'Skyfire', 'The ship has no name');
+new QuestionsConstructor('SciFi', 'Which character speaks the first line in the original 1977 Star Wars movie?', 'C3PO', 'Luke', 'Darth Vader', 'Obi Wan');
+new QuestionsConstructor('SciFi', 'What is the Answer to the Ultimate Question of Life, the Universe, and Everything?', '42', 'Dolphins', 'Bureaucracy', 'Infinity');
+new QuestionsConstructor('Action', 'What computer program caused the end of the world in Terminator?', 'Skynet', 'Ultron', 'Borg', 'Arachnet');
+new QuestionsConstructor('Action', 'Who was originally cast to play the Predator (1987)?', 'Jean-Claude Van Damme', 'Jesse Ventura', 'Kevin Hall Peter', 'Carl Weathers');
+new QuestionsConstructor('Action', 'When does a one inch punch come in handy in Kill Bill?', 'Escape being buried alive', 'Break through a brick wall', 'Rip a man\'s heart out', 'Smash the faces of 88 samurai');
+new QuestionsConstructor('Comedy', 'What name appears on Fogell\'s fake ID in the 2007 movie Superbad?', 'Mclovin', 'Smith', 'Peterson', 'McDonald');
+new QuestionsConstructor('Comedy', 'Whose brain did Igor bring back from the depository in Young Frankenstein?', 'Abbey Normal', 'Hans Delbruck', 'Mel Brooks', 'Frederick Frankenstein');
+new QuestionsConstructor('Documentary', 'What is the most viewed ESPN documentary ever?', 'The Last Dance', 'The U', 'OJ Made in America', 'Catching Hell');
+new QuestionsConstructor('Documentary', 'In what city is the last Blockbuster Video open?', 'Bend, Oregon', 'Bangor, Maine', 'Boulder, Colorado', 'Morley, Alaska');
 console.log(questionsArray);
 
 function wallpaper(category){
@@ -79,9 +102,8 @@ console.log(promptedQuestions);
 
 
 function renderQuestions() {
-  let randomQuestion = selectRandomProduct();
+  categoryContainer.innerText = promptedQuestions[0].category;
   let h3 = document.createElement('h3');
-
   h3.textContent = promptedQuestions[0].question;
   questionContainer.appendChild(h3);
 
@@ -93,7 +115,7 @@ function renderQuestions() {
   button2.setAttribute('id','button2');
   button3.setAttribute('id','button3');
   button4.setAttribute('id','button4');
-  
+
   // Randomizes the answer choices
   let shownAnswer = [];
   let answerArray = [];
@@ -128,12 +150,13 @@ function renderQuestions() {
 function questionSubmit(event){
   let h3 = document.querySelector('h3');
   let button1 = document.querySelector('button');
-
-  let selection1 = document.getElementById('button1').textContent;
-  let selection2 = document.getElementById('button2').textContent;
-  let selection3 = document.getElementById('button3').textContent;
-  let selection4 = document.getElementById('button4').textContent;
-  console.log(`question submit ${selection1}`);
+  let selected = document.getElementById(event.target.id).textContent;
+  console.log(selected);
+  // Added Score tally
+  if(selected === promptedQuestions[0].answerCorrect){
+    userArray[0].score++;
+  }
+  console.log(userArray);
   h3.remove();
   for (let i =0; i<4;i++){
     let button1 = document.querySelector('button');
@@ -146,13 +169,14 @@ function questionSubmit(event){
   // nextQuestion()
 //   if (questionAsked.length > 20){
 //     myContainer.removeEventListener('click', busclicker);}
-promptedQuestions.shift();
-console.log(promptedQuestions);
+  promptedQuestions.shift();
+  console.log(promptedQuestions);
+  console.log(`${userArray[0].score} out of ${20-promptedQuestions.length})`);
   renderQuestions();
   nextQuestion();
-
-
+  storeItem();
 }
+
 questOrder();
 questionAsked();
 renderQuestions();
@@ -171,3 +195,6 @@ function nextQuestion(){
   answerButton4.addEventListener('click',questionSubmit);
 }
 nextQuestion();
+getUsers();
+console.log(userArray);
+
