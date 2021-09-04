@@ -3,7 +3,6 @@
 let userArray =  [];
 
 
-
 let tableBody = document.querySelector('tbody');
 
 function getUsers() {
