@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>User Information</title>
 </head>
 
 <body>
@@ -23,26 +23,29 @@
   </header>
   <main>
 
-    <h2 id="user"> Tell us about yourself!</h1>
-      <form id="addAUser">
-        <fieldset>
-          <label for="name">Name: <input type="text" id="name" name="name"></label>
 
-          <!-- <br><br> -->
+    <form id="addAUser">
+      <fieldset>
+        <legend id="user"> Tell us about yourself!</legend>
+        <label for="name">Name:</label> <input type="text" id="name" name="name" placeholder="Your Name Here">
+        <label for="favorite-color">What is your favorite color?:</label> 
+        <input type="text" id="favoriteColor" name="favorite-color" placeholder="Color??">
+      </fieldset>
+      <fieldset>
+        <!-- <legend>Your avatar</legend>
+        <label><input></label> -->
+      </fieldset>
+      <!-- <a href="question.html"> -->
+        <button id="userSubmit" type="submit">Submit</button>
+      <!-- </a> -->
+    </form>
 
-          <label for="favoriteColor">What is your favorite color?: <input type="text" id="favoriteColor"
-              name="favorite color"></label>
-          <!-- <br><br> -->
-        </fieldset>
-        <a href="question.html"><button id="userSubmit" type="submit">Submit</button></a>
-      </form>
-
-      <h2>Choose your avatar</h2>
-      <div>
-        <img id="avatar one">
-        <img id="avatar two">
-        <img id="avatar three">
-      </div>
+    <!-- <h2>Choose your avatar</h2>
+    <div>
+      <img id="avatar one">
+      <img id="avatar two">
+      <img id="avatar three">
+    </div> -->
   </main>
   <script src="./js/user.js" text="text/javascript"></script>
 </body>
