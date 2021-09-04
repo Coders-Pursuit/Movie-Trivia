@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
-  /* background-color: #ece59a; */
-  font-family: 'Lato', sans-serif;
-  color: #525289;
+    /* background-color: #ece59a; */
+    font-family: 'Lato', sans-serif;
+    color: #525289;
 }
 
 header {
@@ -59,7 +59,7 @@ li {
 li a {
     text-decoration: none;
     font-size: 2rem;
-    width:100%;
+    width: 100%;
     /* font-weight: bold; */
 }
 
@@ -77,24 +77,23 @@ p {
     width: 85%;
     margin: 0px auto;
 }
-article{
-    
+
+article {
     width: 100%;
     background-color: #ece59a;
     min-height: 1000px;
     /* border: 3px black solid; */
-
 }
- aside{
+
+aside {
     justify-content: stretch;
-    display: inline-block; 
+    display: inline-block;
     width: 20%;
     margin: 5% 2% 3%;
     border: 1px solid black;
-    
-    
 }
-img{
+
+img {
     margin-top: 1%;
 }
 
@@ -131,13 +130,7 @@ div {
 }
 
 ------------------------------------- color palette {
-    colors: #cfc8de - header/footer 
-    #ece59a - background 
-    #525289 - other assigned 
-    #54ab95 - other assigned 
-    #cf3566 - other assigned 
-    #6336b2 - other assigned 
-    #000000 - font
+    colors: #cfc8de - header/footer #ece59a - background #525289 - other assigned #54ab95 - other assigned #cf3566 - other assigned #6336b2 - other assigned #000000 - font
 }
 
 /* ------------user page css below  -------------- */
@@ -201,9 +194,9 @@ input {
     border-radius: 10px;
     margin-left: 3%;
 }
-::placeholder{
-    color:white;
 
+::placeholder {
+    color: white;
 }
 
 #userSubmit {
@@ -222,7 +215,47 @@ input {
     background-color: #525289;
     color: white;
 }
-#aboutus-main{
-    
+
+#aboutus-main {
     background-color: lavender;
+}
+
+table, tr, th, td {
+    /* border: 3px solid black; */
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+table {
+    width: 80%;
+    margin: 0px auto;
+    /* margin-top: 2%; */
+    padding: 2%;
+}
+
+tr {
+    /* border: 3px solid black; */
+    margin-top: 20px;
+}
+
+th, td {
+    border: 5px solid #525289;
+    margin-top: 20px;
+    padding: 20px;
+    /* width: 50%; */
+}
+
+thead th {
+    background-color: #525289;
+    color: #cfc8de;
+    font-weight: bold;
+}
+
+tbody th:nth-child(1) {
+    text-align: left;
+}
+
+td {
+    width: 10%;
 }
