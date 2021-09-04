@@ -220,8 +220,21 @@ input {
     background-color: lavender;
 }
 
+#leaderboard-article {
+    margin-top: 0%;
+    min-height: 1000px;
+}
+
+h6 {
+    font-size: 3rem;
+    width: 100%;
+    padding-top: 2%;
+    text-align: center;
+    margin: 0% 0% 2%;
+}
+
 table, tr, th, td {
-    /* border: 3px solid black; */
+    border: 5px solid #525289;
     text-align: center;
     border-radius: 10px;
     font-size: 1.5rem;
@@ -230,24 +243,26 @@ table, tr, th, td {
 table {
     width: 80%;
     margin: 0px auto;
-    /* margin-top: 2%; */
-    padding: 2%;
+    border-collapse: collapse;
 }
 
 tr {
-    /* border: 3px solid black; */
-    margin-top: 20px;
+    border: 3px solid #525289;
+    background-color: transparent;
+}
+
+tr:hover {
+    background-color:transparent;
 }
 
 th, td {
-    border: 5px solid #525289;
-    margin-top: 20px;
     padding: 20px;
-    /* width: 50%; */
+    border-radius: 0px;
 }
 
 thead th {
     background-color: #525289;
+    border-radius: 0px;
     color: #cfc8de;
     font-weight: bold;
 }
