@@ -274,3 +274,13 @@ tbody th:nth-child(1) {
 td {
     width: 10%;
 }
+
+
+
+/* About Me Images */
+
+img {
+    width: 75%;
+    margin: 0 auto;
+    margin-left: 12.5%;
+}
