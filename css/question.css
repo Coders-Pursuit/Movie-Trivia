@@ -2,7 +2,7 @@
   box-sizing: border-box;
   background-color: #ece59a;
   font-family: 'Lato', sans-serif;
-  color: purple;
+  color: #525289;
 }
 
 /* ------------------------------------- color palette {
@@ -23,7 +23,7 @@ body {
 
 header {
   background-color: #cfc8de;
-  color: #6336b2;
+  color: #525289;
   height: 75px;
   width: 100%;
   display: inline-block;

@@ -1,11 +1,13 @@
 * {
-    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
+  /* background-color: #ece59a; */
+  font-family: 'Lato', sans-serif;
+  color: #525289;
 }
 
 header {
     background-color: #cfc8de;
-    color: #6336b2;
+    color: #525289;
     height: 75px;
     width: 100%;
     display: inline-block;
@@ -30,6 +32,7 @@ main {
 
 h1, nav, ul, li, a {
     display: inline-block;
+    /* background-color: #cfc8de; */
     margin: 0px 0px 0px 3%;
 }
 
@@ -50,7 +53,7 @@ ul {
 li {
     padding-right: 1rem;
     padding-left: 1rem;
-    width: 45%;
+    width: 25%;
 }
 
 li a {
@@ -167,6 +170,10 @@ input {
     border-radius: 10px;
     margin-left: 3%;
 }
+::placeholder{
+    color:white;
+
+}
 
 #userSubmit {
     margin-top: 8rem;
@@ -177,6 +184,7 @@ input {
     font-size: 1.5rem;
     position: relative;
     left: 82%;
+    color: white;
 }
 
 #userSubmit:hover {
