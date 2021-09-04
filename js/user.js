@@ -20,7 +20,7 @@ function UserConstructor(name, color, score = 0) {
   this.name = name;
   this.color = color;
   this.score = score;
-  userArray.push(this);
+  userArray.unshift(this);
 }
 
 function userSubmit(event){
