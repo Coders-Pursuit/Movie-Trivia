@@ -30,6 +30,8 @@ function renderTable() {
     let td = document.createElement('td');
     td.textContent = userArray[i].score;
     tr.appendChild(td);
+    tr.style.backgroundColor = `${userArray[i].color}`;
+    console.log(userArray[i].color);
 
   }
 }
